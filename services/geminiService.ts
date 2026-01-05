@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { LeadFormData, AssessmentResponse } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
 
 export const generateInstantAssessment = async (data: LeadFormData): Promise<AssessmentResponse> => {
   try {
